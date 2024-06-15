@@ -1,4 +1,5 @@
 import random
+import os   
 
 class EnigmaGame:
     def __init__(self):
@@ -8,12 +9,20 @@ class EnigmaGame:
         self.attempts = 0
         self.objects = []
 
-    def load_image(self, image_path):
-        # Carrega a imagem e seus objetos
-        self.current_image = image_path
+    def load_image(self, image_name):
+        # Obtém o caminho completo da imagem
+        self.current_image = self.get_image_path(image_name)
         self.objects = self.generate_objects()
         self.next_object()
 
+    def get_image_path(self, image_name):
+        # Assume que as imagens estão em uma pasta chamada "images"
+        base_path = "images"
+        full_path = os.path.join(base_path, image_name)
+        if not os.path.exists(full_path):
+            raise FileNotFoundError(f"Imagem não encontrada: {full_path}")
+        return full_path
+    
     def generate_objects(self):
         # Gerar objetos e textos enigmáticos
         return [
