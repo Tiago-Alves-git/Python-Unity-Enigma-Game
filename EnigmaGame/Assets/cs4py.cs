@@ -19,7 +19,7 @@ public class PythonIntegration : MonoBehaviour
     {
         pythonProcess = new Process();
         pythonProcess.StartInfo.FileName = "python";
-        pythonProcess.StartInfo.Arguments = "path_to_python_script.py";
+        pythonProcess.StartInfo.Arguments = "logic.py";
         pythonProcess.StartInfo.UseShellExecute = false;
         pythonProcess.StartInfo.RedirectStandardOutput = true;
         pythonProcess.StartInfo.RedirectStandardInput = true;

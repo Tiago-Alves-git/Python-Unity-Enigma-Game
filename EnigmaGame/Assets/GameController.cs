@@ -4,46 +4,31 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject mainMenu;
-    public GameObject gameWindow;
-    public GameObject scoreWindow;
-    public GameObject rulesText;
-    public Text scoreText;
-    public Button PlayBtn;
-    public Button rulesButton;
-    public Button retryButton;
+    public GameObject EnigmaPanels;
+    public GameObject LandingWindow;
+    public GameObject HowToPanel;
+    public Button PlayBtn, HowToBtn, CloseHowToPanel;
 
     void Start()
     {
         PlayBtn.onClick.AddListener(StartGame);
-        rulesButton.onClick.AddListener(ShowRules);
-        retryButton.onClick.AddListener(RestartGame);
+        HowToBtn.onClick.AddListener(ShowRules);
+        CloseHowToPanel.onClick.AddListener(CloseRules);
     }
 
     void StartGame()
     {
-        mainMenu.SetActive(false);
-        gameWindow.SetActive(true);
+        EnigmaPanels.SetActive(true);
+        LandingWindow.SetActive(false);
     }
 
-    // void ShowRules()
-    // {
-    //     rulesText.text = "Regras do jogo:\n" + 
-    //                      "1. Cada imagem terá até 5 textos enigmáticos.\n" + 
-    //                      "2. Você terá 2 tentativas para clicar no objeto certo.\n" + 
-    //                      "3. Pontuação: Acertar de primeira = 10 pontos, de segunda = 5 pontos, errar = 0 pontos.";
-    //     rulesText.gameObject.SetActive(true);
-    // }
+    void ShowRules()
+    {
+        HowToPanel.gameObject.SetActive(true);
+    }
 
-    // public void EndGame(int score)
-    // {
-    //     gameWindow.SetActive(false);
-    //     scoreWindow.SetActive(true);
-    //     scoreText.text = "Sua pontuação: " + score;
-    // }
-
-    // void RestartGame()
-    // {
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    // }
+    void CloseRules()
+    {
+        HowToPanel.gameObject.SetActive(false);
+    }
 }
