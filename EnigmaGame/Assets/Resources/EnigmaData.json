@@ -1,0 +1,22 @@
+{
+    "questions": [
+        {
+            "EnigmaQuote": "Sou uma chave que abre portas, mas não sou de metal. Sou procurada por todos, mas só alguns conseguem me encontrar. O que sou?",
+            "ImagePath": "Images/enigma_key_treasure_password.jpg",
+            "Answers": ["Senha", "Tesouro", "Mapa", "Chave do carro"],
+            "CorrectAnswer": 0
+        },
+        {
+            "EnigmaQuote": "Os dois irmãos que correm lado a lado, um corre rápido, o outro, devagar. Um sempre chega primeiro, mas o outro nunca fica para trás. Quem são?",
+            "ImagePath": "Images/enigma_chieldren_friends_two.jpg",
+            "Answers": ["Mente e Corpo", "Passado e Futuro", "Noite e Dia","Caminho e Via"],
+            "CorrectAnswer": 2
+        },
+        {
+            "EnigmaQuote": "Na terra de sonhos distorcidos e realidades fragmentadas, eu existo. Minha face reflete seus medos mais profundos, e meu sorriso é um convite para a loucura. Quem sou eu, que vive nos espelhos da mente?",
+            "ImagePath": "Images/enigma_joaquin_phoenix_joker.jpg",
+            "Answers": ["Jeffrey Dahmer", "Coringa" ,"Freddy Krueger", "Kevin Wendell (Fragmentado)"],
+            "CorrectAnswer": 1
+        }
+    ]
+}
